@@ -3,8 +3,8 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
-  // Use relative path for Electron and '/' for Web/Netlify
-  base: process.env.ELECTRON === 'true' ? './' : '/',
+  // Use relative path for all environments (GitHub Pages, Netlify, Vercel, Electron)
+  base: './',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
